@@ -9,7 +9,16 @@ import "bootstrap";
 import "../styles/index.scss";
 
 //import your own components
-import { Home } from "./component/home.js";
+//const arrayCards=["Horse", "Turtle", "Elephant", "Monkey"];
+
+//import { Home } from "./component/landingPage.js/index.js";
+import { Jumbotron } from "./component/jumbotron.js";
+import { Card } from "./component/card.js";
+//import { NavBar } from "../component/navBar.js";
+
+/*const newArrayCards = arrayCards.map((singleCards, i) =>Card() {
+	return <div className="row text-center">hello</div>;*/
+const cardContainer = <div className="container">{[Jumbotron, Card]}</div>;
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+ReactDOM.render(<Jumbotron />, document.body);
